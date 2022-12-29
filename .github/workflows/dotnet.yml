@@ -66,6 +66,12 @@ jobs:
       with:
         recreate: true
         path: code-coverage-results.md
+        
+    - name: Archive code coverage results
+      uses: actions/upload-artifact@v3
+      with:
+        name: code-coverage-report
+        path: code-coverage-results.md
     
     
         

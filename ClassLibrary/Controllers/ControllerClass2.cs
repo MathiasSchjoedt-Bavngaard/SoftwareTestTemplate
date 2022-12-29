@@ -12,7 +12,8 @@ namespace ClassLibrary.Controllers
     {
         public int Method2(int input)
         {
-            Console.WriteLine("MSB made this and input is" + input);
+            Console.WriteLine("MSB made this and input is: " + input);
+            Console.WriteLine("Output Should be: " + (input + 2));
             return input + 2;
         }
     }

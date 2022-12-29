@@ -10,7 +10,8 @@ namespace ClassLibrary.Boundry
     {
         public int Method3(int input)
         {
-            Console.WriteLine("MSB made this and input is" + input);
+            Console.WriteLine("MSB made this and input is: " + input);
+            Console.WriteLine("Output Should be: " + (input + 3));
             return input + 3;
         }
     }

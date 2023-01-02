@@ -72,15 +72,24 @@ jobs:
       with:
         name: code-coverage-report
         path: code-coverage-results.md
-    
-    - name: Update GitHub Profile README
-      uses: theboi/github-update-readme@v1.0
+    - uses: actions/checkout@master
+
+    - uses: muesli/readme-scribe@master
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
       with:
-        Default: |
-          code-coverage-results.md
-              
+          template:  code-coverage-results.md
+          writeTo: "README.md"
+
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+          commit_message: Update generated README
+          branch: main
+          commit_user_name: readme-scribe 🤖
+          commit_user_email: actions@github.com
+          commit_author: readme-scribe 🤖 <actions@github.com>
 
     
         

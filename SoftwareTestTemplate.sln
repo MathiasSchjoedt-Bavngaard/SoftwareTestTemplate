@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Unit", "Test.Unit\Test.Unit.csproj", "{E6B936E6-59FF-4CD7-987F-9C6D828D10DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Integration", "Test.Intergration\Test.Integration.csproj", "{1E233618-159D-49E5-BFE2-A233D7851246}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Integration", "Test.Integration\Test.Integration.csproj", "{1E233618-159D-49E5-BFE2-A233D7851246}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

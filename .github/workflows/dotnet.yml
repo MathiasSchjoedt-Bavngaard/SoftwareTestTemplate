@@ -78,7 +78,7 @@ jobs:
       env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
       with:
-          template:  code-coverage-results.md
+          template:  "code-coverage-results.md"
           writeTo: "README.md"
 
     - uses: stefanzweifel/git-auto-commit-action@v4

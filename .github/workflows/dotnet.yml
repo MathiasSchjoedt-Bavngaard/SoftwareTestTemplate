@@ -73,6 +73,15 @@ jobs:
         name: code-coverage-report
         path: code-coverage-results.md
     
+    - name: Update GitHub Profile README
+      uses: theboi/github-update-readme@v1.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        Default: |
+          code-coverage-results.md
+              
+
     
         
   test2:

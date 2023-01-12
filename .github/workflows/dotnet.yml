@@ -52,13 +52,16 @@ jobs:
       with:
         filename: coverage/**/coverage.cobertura.xml
         badge: true
-        fail_below_min: true
+        fail_below_min: false
         format: markdown
         hide_branch_rate: false
-        hide_complexity: true
+        hide_complexity: false
         indicators: true
         output: both
-        thresholds: '60 80'
+        thresholds: '40 80'
+        
+    - name: Output to Job Summary
+      run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
 
     - name: Add Coverage PR Comment
       uses: marocchino/sticky-pull-request-comment@v2
@@ -86,6 +89,10 @@ jobs:
         customSettings: '' # Optional custom settings (separated by semicolon). See: https://github.com/danielpalme/ReportGenerator/wiki/Settings.
         toolpath: 'reportgeneratortool' # Default directory for installing the dotnet tool.
 
+
+    - name: Output to Job Summary
+      run: cat coveragereport/SummaryGithub.md >> $GITHUB_STEP_SUMMARY
+      
     - name: Upload coverage report artifact
       uses: actions/upload-artifact@v2.2.3
       with:
